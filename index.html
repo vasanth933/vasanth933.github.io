@@ -6,8 +6,13 @@
   <title>Vasanth Jamulayala — Python Developer</title>
   <meta name="description" content="Vasanth Jamulayala — Python Developer. Django, DRF, Celery, Redis, React Native, Electron." />
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -15,35 +20,57 @@
         <p class="sub">Python Developer</p>
       </div>
       <nav id="nav" class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-      <button id="menuBtn" class="menu-btn" aria-label="menu">☰</button>
+      <button id="menuBtn" class="menu-btn" aria-label="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
     <section class="hero container" id="home">
-      <div class="hero-left">
-        <h2>Hi — I'm <strong>Vasanth Jamulayala</strong></h2>
+      <div class="hero-left animate-on-scroll">
+        <div class="badge">👋 Welcome to my portfolio</div>
+        <h2 class="hero-title">
+          Hi — I'm <strong class="gradient-text">Vasanth Jamulayala</strong>
+        </h2>
         <p class="lead">
           Python Developer focused on scalable backend systems using Django, DRF, Celery and Redis. I build APIs and integrations for web, mobile (React Native) and desktop (Electron).
         </p>
         <p class="contact-line">
-          <a href="mailto:jvasanth625@gmail.com">jvasanth625@gmail.com</a> · +91 8688797542 · Hyderabad, India
+          <span class="icon">📧</span> <a href="mailto:jvasanth625@gmail.com">jvasanth625@gmail.com</a>
+          <span class="separator">·</span>
+          <span class="icon">📱</span> +91 8688797542
+          <span class="separator">·</span>
+          <span class="icon">📍</span> Hyderabad, India
         </p>
         <p class="links">
-          <a class="btn" href="https://github.com/vasanth933" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-primary" href="https://github.com/vasanth933" target="_blank" rel="noopener">
+            <span>GitHub</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">
+            <span>LinkedIn</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
         </p>
       </div>
-      <div class="hero-right">
-        <div class="card">
-          <h3>Summary</h3>
+      <div class="hero-right animate-on-scroll">
+        <div class="card card-3d">
+          <div class="glow-effect"></div>
+          <h3>✨ Summary</h3>
           <p>
             Backend engineer with experience building billing, licensing, payments and logistics systems. Strong focus on performance (caching, async) and reliable deployments (Docker, GitHub Actions).
           </p>
@@ -51,17 +78,24 @@
             <li><strong>Open to:</strong> Remote & on-site</li>
             <li><strong>Location:</strong> Hyderabad, India</li>
           </ul>
+          <div class="card-shine"></div>
         </div>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="container section">
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">01.</span> Professional Experience
+      </h2>
 
-      <article class="card experience">
-        <h3>Python Developer — TailorTrix Software Solutions Pvt Ltd</h3>
-        <p class="muted">Oct 2023 – Jul 2025 · Hyderabad, India</p>
+      <article class="card card-3d experience animate-on-scroll">
+        <div class="glow-effect"></div>
+        <div class="experience-header">
+          <h3>Python Developer — TailorTrix Software Solutions Pvt Ltd</h3>
+          <span class="badge badge-sm">Full-time</span>
+        </div>
+        <p class="muted">🗓️ Oct 2023 – Jul 2025 · 📍 Hyderabad, India</p>
         <ul>
           <li>Engineered scalable backend systems with Django, DRF, Celery, Redis and MySQL powering web, mobile and desktop apps.</li>
           <li>Built and optimized REST APIs for user management, subscription billing, license management, payments and order tracking.</li>
@@ -70,108 +104,175 @@
           <li>Improved system performance by 60%+ via query optimization, Redis caching and async processing.</li>
           <li>Containerized services with Docker and automated deployments with GitHub Actions CI/CD.</li>
         </ul>
+        <div class="card-shine"></div>
       </article>
 
-      <article class="card experience">
-        <h3>Software Engineer (Short-term Contract) — Algonox Technologies Pvt Ltd.</h3>
-        <p class="muted">Jul 2025 – Aug 2025 · Hyderabad, India</p>
+      <article class="card card-3d experience animate-on-scroll">
+        <div class="glow-effect"></div>
+        <div class="experience-header">
+          <h3>Software Engineer (Short-term Contract) — Algonox Technologies Pvt Ltd.</h3>
+          <span class="badge badge-sm">Contract</span>
+        </div>
+        <p class="muted">🗓️ Jul 2025 – Aug 2025 · 📍 Hyderabad, India</p>
         <ul>
           <li>Completed onboarding in Python/Django and contributed to API design reviews.</li>
           <li>Short exploratory role to deepen experience in scalable backend systems.</li>
         </ul>
+        <div class="card-shine"></div>
       </article>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="container section">
-      <h2 class="section-title">Technical Skills</h2>
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">02.</span> Technical Skills
+      </h2>
       <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-icon">💻</div>
           <h4>Languages & Frameworks</h4>
           <p>Python, JavaScript, Django, DRF, Flask, React</p>
+          <div class="skill-glow"></div>
         </div>
-        <div class="skill-card">
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-icon">⚡</div>
           <h4>Async & Performance</h4>
           <p>Celery, Redis, RabbitMQ, Query Optimization, Caching</p>
+          <div class="skill-glow"></div>
         </div>
-        <div class="skill-card">
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-icon">☁️</div>
           <h4>Cloud & Tools</h4>
           <p>PostgreSQL, MySQL, AWS, Docker, GitHub Actions, Git, Jira</p>
+          <div class="skill-glow"></div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="container section">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">03.</span> Projects
+      </h2>
 
-      <div class="project">
+      <div class="project animate-on-scroll">
+        <div class="project-number">01</div>
         <h3>TailorTrix Desktop Application</h3>
         <p class="muted">Electron · React · Django · MySQL · Razorpay · Celery · Redis</p>
         <p>Developed backend modules for licensing, subscriptions and boutique operations. Integrated Razorpay and implemented sync between desktop and backend services.</p>
+        <div class="project-glow"></div>
       </div>
 
-      <div class="project">
+      <div class="project animate-on-scroll">
+        <div class="project-number">02</div>
         <h3>InstaFabrics Mobile App</h3>
         <p class="muted">React Native · Django REST · Google Maps · Porter · Shiprocket · Razorpay</p>
         <p>Built ordering & delivery app for boutique materials with live tracking, delivery automation and secure payments.</p>
+        <div class="project-glow"></div>
       </div>
 
-      <div class="project">
+      <div class="project animate-on-scroll">
+        <div class="project-number">03</div>
         <h3>Billing & Invoice Software (Swipe-like)</h3>
         <p class="muted">Django · DRF · MySQL · PDF Generation</p>
         <p>Created billing flow: quotations, invoices, GST breakdown and PDF generator. Fast searchable catalog and customer records.</p>
+        <div class="project-glow"></div>
       </div>
 
-      <div class="project">
+      <div class="project animate-on-scroll">
+        <div class="project-number">04</div>
         <h3>Admin & Boutique Dashboards</h3>
         <p class="muted">Django Templates · REST APIs · Charts</p>
         <p>Internal admin panel for user management, license generation, renewals, payments and revenue analytics.</p>
+        <div class="project-glow"></div>
       </div>
     </section>
 
     <!-- Education + Achievements -->
     <section id="education" class="container section">
-      <h2 class="section-title">Education & Achievements</h2>
-      <p><strong>NIT Andhra Pradesh</strong> — B.Tech Mechanical Engineering (7.21/10)</p>
-      <ul>
-        <li>AIR 15K in JEE Mains 2018; 3K in TS EAMCET</li>
-        <li>State 1st in Chekumuki Science Forum competition</li>
-      </ul>
-      <p class="muted">Actively advancing in asyncio, microservices and Python 3.12+ features.</p>
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">04.</span> Education & Achievements
+      </h2>
+      <div class="card card-3d animate-on-scroll">
+        <div class="glow-effect"></div>
+        <p><strong>🎓 NIT Andhra Pradesh</strong> — B.Tech Mechanical Engineering (7.21/10)</p>
+        <ul>
+          <li>🏆 AIR 15K in JEE Mains 2018; 3K in TS EAMCET</li>
+          <li>🥇 State 1st in Chekumuki Science Forum competition</li>
+        </ul>
+        <p class="muted">📚 Actively advancing in asyncio, microservices and Python 3.12+ features.</p>
+        <div class="card-shine"></div>
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="container section contact-section">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">05.</span> Contact
+      </h2>
       <div class="contact-grid">
-        <div>
-          <p><strong>Email:</strong> <a href="mailto:jvasanth625@gmail.com">jvasanth625@gmail.com</a></p>
-          <p><strong>Phone:</strong> +91 8688797542</p>
-          <p><strong>Location:</strong> Hyderabad, India 500037</p>
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email:</strong>
+              <a href="mailto:jvasanth625@gmail.com">jvasanth625@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <strong>Phone:</strong>
+              <span>+91 8688797542</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Location:</strong>
+              <span>Hyderabad, India 500037</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/vasanth933" target="_blank" rel="noopener">github.com/vasanth933</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <div>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">linkedin.com/in/vasanth-jamulayala</a>
+            </div>
+          </div>
         </div>
-        <div>
-          <p><strong>GitHub:</strong> <a href="https://github.com/vasanth933" target="_blank" rel="noopener">github.com/vasanth933</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">linkedin.com/in/vasanth-jamulayala</a></p>
-        </div>
-      </div>
 
-      <form id="contactForm" class="contact-form" onsubmit="submitContact(event)">
-        <label>
-          <span>Name</span>
-          <input type="text" id="name" placeholder="Your name" required>
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" id="email" placeholder="Your email" required>
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea id="message" rows="4" placeholder="Short message" required></textarea>
-        </label>
-        <button type="submit" class="btn">Send message</button>
-        <p id="formMsg" class="muted small"></p>
-      </form>
+        <form id="contactForm" class="contact-form animate-on-scroll" onsubmit="submitContact(event)">
+          <div class="glow-effect"></div>
+          <label>
+            <span>Name</span>
+            <input type="text" id="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" placeholder="Your email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea id="message" rows="4" placeholder="Short message" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">
+            <span>Send message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+          <p id="formMsg" class="muted small"></p>
+          <div class="card-shine"></div>
+        </form>
+      </div>
     </section>
   </main>
 
