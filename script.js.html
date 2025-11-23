@@ -1,0 +1,38 @@
+// small interactions for menu, year, and fake contact form behavior
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+
+menuBtn.addEventListener('click', () => {
+  if (nav.style.display === 'flex') {
+    nav.style.display = 'none';
+  } else {
+    nav.style.display = 'flex';
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '64px';
+    nav.style.right = '20px';
+    nav.style.background = 'rgba(4,8,16,0.9)';
+    nav.style.padding = '10px';
+    nav.style.borderRadius = '8px';
+  }
+});
+
+function submitContact(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const msgEl = document.getElementById('formMsg');
+
+  if(!name || !email || !message){
+    msgEl.textContent = 'Please fill all fields.';
+    return;
+  }
+
+  // Simple local feedback. If you want real messages, connect to a backend or use Formspree/Netlify forms.
+  msgEl.textContent = 'Thanks — message received (demo).';
+  document.getElementById('contactForm').reset();
+  setTimeout(()=> msgEl.textContent = '', 4000);
+}
