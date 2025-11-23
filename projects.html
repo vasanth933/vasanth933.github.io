@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects - Vasanth Jamulayala</title>
+  <meta name="description" content="Portfolio projects by Vasanth Jamulayala" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Vasanth<span class="dot">.</span></a></h1>
+        <p class="sub typing-effect"></p>
+      </div>
+      <nav id="nav" class="nav">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section" style="margin-top: 120px;">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">03.</span> Projects
+        <div class="title-decoration"></div>
+      </h2>
+
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <a href="project-tailortrix.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="TailorTrix Desktop App" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fas fa-desktop"></i> Electron</span>
+                <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">01</div>
+                <h3>TailorTrix Desktop Application</h3>
+              </div>
+              <p class="muted">Electron · React · Django · MySQL · Razorpay · Celery · Redis</p>
+              <p>Developed backend modules for licensing, subscriptions and boutique operations. Integrated Razorpay and implemented sync between desktop and backend services.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-code"></i>
+                  <span>15K+ Lines</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span>200+ Users</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.8 Rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project-instafabrics.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="InstaFabrics Mobile App" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-react"></i> React Native</span>
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-map-marked-alt"></i> Maps</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">02</div>
+                <h3>InstaFabrics Mobile App</h3>
+              </div>
+              <p class="muted">React Native · Django REST · Google Maps · Porter · Shiprocket · Razorpay</p>
+              <p>Built ordering & delivery app for boutique materials with live tracking, delivery automation and secure payments.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>500+ Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-shipping-fast"></i>
+                  <span>1K+ Deliveries</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.9 Rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project-billing.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Billing Software" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-badge"><i class="fas fa-file-pdf"></i> PDF</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">03</div>
+                <h3>Billing & Invoice Software</h3>
+              </div>
+              <p class="muted">Django · DRF · MySQL · PDF Generation</p>
+              <p>Created billing flow: quotations, invoices, GST breakdown and PDF generator. Fast searchable catalog and customer records.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-file-invoice"></i>
+                  <span>10K+ Invoices</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-clock"></i>
+                  <span>90% Time Saved</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Real-time</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="project-dashboard.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Admin Dashboard" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-chart-pie"></i> Charts</span>
+                <span class="tech-badge"><i class="fas fa-server"></i> REST API</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">04</div>
+                <h3>Admin & Boutique Dashboards</h3>
+              </div>
+              <p class="muted">Django Templates · REST APIs · Charts</p>
+              <p>Internal admin panel for user management, license generation, renewals, payments and revenue analytics.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-users-cog"></i>
+                  <span>Multi-tenant</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Secure</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span>Fast</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Vasanth Jamulayala — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

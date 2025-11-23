@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Vasanth Jamulayala</title>
+  <meta name="description" content="Get in touch with Vasanth Jamulayala" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Vasanth<span class="dot">.</span></a></h1>
+        <p class="sub typing-effect"></p>
+      </div>
+      <nav id="nav" class="nav">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section contact-section" style="margin-top: 120px;">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">05.</span> Contact
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email:</strong>
+              <a href="mailto:jvasanth625@gmail.com">jvasanth625@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+              <strong>Phone:</strong>
+              <span>+91 8688797542</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Location:</strong>
+              <span>Hyderabad, India 500037</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/vasanth933" target="_blank" rel="noopener">github.com/vasanth933</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <div>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">linkedin.com/in/vasanth-jamulayala</a>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form animate-on-scroll" onsubmit="submitContact(event)">
+          <div class="glow-effect"></div>
+          <label>
+            <span>Name</span>
+            <input type="text" id="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" placeholder="Your email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea id="message" rows="4" placeholder="Short message" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">
+            <span>Send message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </button>
+          <p id="formMsg" class="muted small"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Vasanth Jamulayala — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Vasanth Jamulayala</title>
+  <meta name="description" content="Professional experience and background of Vasanth Jamulayala" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Vasanth<span class="dot">.</span></a></h1>
+        <p class="sub typing-effect"></p>
+      </div>
+      <nav id="nav" class="nav">
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section" style="margin-top: 120px;">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">01.</span> Professional Experience
+      </h2>
+
+      <article class="card card-3d experience animate-on-scroll">
+        <div class="glow-effect"></div>
+        <div class="experience-header">
+          <h3>Python Developer — TailorTrix Software Solutions Pvt Ltd</h3>
+          <span class="badge badge-sm">Full-time</span>
+        </div>
+        <p class="muted">🗓️ Oct 2023 – Jul 2025 · 📍 Hyderabad, India</p>
+        <ul>
+          <li>Engineered scalable backend systems with Django, DRF, Celery, Redis and MySQL powering web, mobile and desktop apps.</li>
+          <li>Built and optimized REST APIs for user management, subscription billing, license management, payments and order tracking.</li>
+          <li>Integrated Razorpay, Porter, Shiprocket, Google Maps, BizMagnet WhatsApp API and AWS SMS for automation.</li>
+          <li>Designed subscription billing & automated license activation system — reduced manual workload by 90%+.</li>
+          <li>Improved system performance by 60%+ via query optimization, Redis caching and async processing.</li>
+          <li>Containerized services with Docker and automated deployments with GitHub Actions CI/CD.</li>
+        </ul>
+        <div class="card-shine"></div>
+      </article>
+
+      <article class="card card-3d experience animate-on-scroll">
+        <div class="glow-effect"></div>
+        <div class="experience-header">
+          <h3>Software Engineer (Short-term Contract) — Algonox Technologies Pvt Ltd.</h3>
+          <span class="badge badge-sm">Contract</span>
+        </div>
+        <p class="muted">🗓️ Jul 2025 – Aug 2025 · 📍 Hyderabad, India</p>
+        <ul>
+          <li>Completed onboarding in Python/Django and contributed to API design reviews.</li>
+          <li>Short exploratory role to deepen experience in scalable backend systems.</li>
+        </ul>
+        <div class="card-shine"></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Vasanth Jamulayala — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

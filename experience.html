@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience - Vasanth Jamulayala</title>
+  <meta name="description" content="Education and achievements of Vasanth Jamulayala" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Vasanth<span class="dot">.</span></a></h1>
+        <p class="sub typing-effect"></p>
+      </div>
+      <nav id="nav" class="nav">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link active">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section" style="margin-top: 120px;">
+      <h2 class="section-title animate-on-scroll">
+        <span class="title-number">04.</span> Education & Achievements
+      </h2>
+      <div class="card card-3d animate-on-scroll">
+        <div class="glow-effect"></div>
+        <p><strong>🎓 NIT Andhra Pradesh</strong> — B.Tech Mechanical Engineering (7.21/10)</p>
+        <ul>
+          <li>🏆 AIR 15K in JEE Mains 2018; 3K in TS EAMCET</li>
+          <li>🥇 State 1st in Chekumuki Science Forum competition</li>
+        </ul>
+        <p class="muted">📚 Actively advancing in asyncio, microservices and Python 3.12+ features.</p>
+        <div class="card-shine"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Vasanth Jamulayala — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

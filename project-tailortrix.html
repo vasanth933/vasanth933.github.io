@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TailorTrix Desktop Application - Vasanth Jamulayala</title>
+  <meta name="description" content="Detailed project overview of TailorTrix Desktop Application" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .project-detail-hero {
+      background: linear-gradient(135deg, rgba(110, 231, 183, 0.1), rgba(59, 130, 246, 0.1));
+      padding: 80px 0 60px;
+      margin-top: 72px;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      transform: translateX(-4px);
+    }
+    
+    .project-hero-content h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    
+    .project-hero-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+      color: var(--muted);
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .achievement-card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 20px;
+    }
+    
+    .achievement-card h3 {
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .tech-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    
+    .tech-item {
+      background: rgba(110, 231, 183, 0.1);
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(110, 231, 183, 0.2);
+    }
+    
+    .tech-item i {
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <canvas id="particleCanvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">Vasanth<span class="dot">.</span></a></h1>
+        <p class="sub typing-effect"></p>
+      </div>
+      <nav id="nav" class="nav">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-detail-hero">
+      <div class="container">
+        <a href="projects.html" class="back-link">
+          <i class="fas fa-arrow-left"></i>
+          Back to Projects
+        </a>
+        
+        <div class="project-hero-content">
+          <h1>TailorTrix Desktop Application</h1>
+          <p class="lead">Enterprise boutique management system built with Electron, React, and Django backend</p>
+          
+          <div class="project-hero-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>Oct 2023 - Jul 2025</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-users"></i>
+              <span>200+ Active Users</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-star"></i>
+              <span>4.8/5 Rating</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-code"></i>
+              <span>15,000+ Lines of Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">01.</span> Project Overview
+      </h2>
+      
+      <div class="card">
+        <p>TailorTrix is a comprehensive desktop application designed for boutique and tailoring businesses to manage their entire operation from a single platform. The application handles everything from customer management and order tracking to billing, payments, and license management.</p>
+        
+        <p style="margin-top: 16px;">As the lead backend developer, I architected and implemented the entire server infrastructure, API endpoints, and business logic that powers the desktop application.</p>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">02.</span> Project Screenshots
+      </h2>
+      
+      <div class="project-gallery">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Dashboard">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Analytics">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Reports">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Orders">
+        </div>
+      </div>
+      
+      <div class="card" style="margin-top: 20px; background: rgba(255, 193, 7, 0.1); border-color: rgba(255, 193, 7, 0.3);">
+        <p style="color: var(--text);"><strong>📸 Note:</strong> Replace these placeholder images with your actual project screenshots showing the dashboard, features, and user interface.</p>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">03.</span> Key Features
+      </h2>
+      
+      <div class="skills-grid">
+        <div class="achievement-card">
+          <h3><i class="fas fa-users"></i> Customer Management</h3>
+          <p>Complete customer database with order history, measurements, and preferences</p>
+        </div>
+        
+        <div class="achievement-card">
+          <h3><i class="fas fa-shopping-cart"></i> Order Tracking</h3>
+          <p>Real-time order status updates from measurement to delivery</p>
+        </div>
+        
+        <div class="achievement-card">
+          <h3><i class="fas fa-credit-card"></i> Payment Integration</h3>
+          <p>Integrated Razorpay for secure online payments and invoicing</p>
+        </div>
+        
+        <div class="achievement-card">
+          <h3><i class="fas fa-key"></i> License Management</h3>
+          <p>Automated license generation, activation, and renewal system</p>
+        </div>
+        
+        <div class="achievement-card">
+          <h3><i class="fas fa-sync"></i> Data Synchronization</h3>
+          <p>Real-time sync between desktop app and cloud backend</p>
+        </div>
+        
+        <div class="achievement-card">
+          <h3><i class="fas fa-file-invoice"></i> Billing System</h3>
+          <p>GST-compliant invoicing with PDF generation</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">04.</span> Technology Stack
+      </h2>
+      
+      <div class="tech-stack-grid">
+        <div class="tech-item">
+          <i class="fas fa-desktop"></i>
+          <div>Electron</div>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-react"></i>
+          <div>React</div>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-python"></i>
+          <div>Django</div>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-database"></i>
+          <div>MySQL</div>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-tasks"></i>
+          <div>Celery</div>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-bolt"></i>
+          <div>Redis</div>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-credit-card"></i>
+          <div>Razorpay</div>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-docker"></i>
+          <div>Docker</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">05.</span> Key Achievements
+      </h2>
+      
+      <div class="card">
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: var(--accent);">🚀 Performance:</strong> Optimized database queries reducing load time by 60%
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: var(--accent);">💰 Revenue:</strong> Payment integration processed $100K+ in transactions
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: var(--accent);">⚡ Automation:</strong> Reduced manual license management workload by 90%
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: var(--accent);">👥 Adoption:</strong> Deployed to 200+ active boutique businesses
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: var(--accent);">📊 Reliability:</strong> Achieved 99.5% uptime with robust error handling
+          </li>
+          <li style="padding: 12px 0;">
+            <strong style="color: var(--accent);">🔄 CI/CD:</strong> Implemented automated deployments with GitHub Actions
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">
+        <span class="title-number">06.</span> Technical Highlights
+      </h2>
+      
+      <div class="card" style="margin-bottom: 20px;">
+        <h3>Backend Architecture</h3>
+        <p>Built a scalable REST API using Django and Django REST Framework with the following components:</p>
+        <ul>
+          <li>Custom authentication system with JWT tokens</li>
+          <li>Real-time WebSocket connections for live updates</li>
+          <li>Celery task queue for background processing</li>
+          <li>Redis caching layer for improved performance</li>
+          <li>MySQL database with optimized indexing</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <h3>Payment Integration</h3>
+        <p>Integrated Razorpay payment gateway with:</p>
+        <ul>
+          <li>Subscription billing with automatic renewals</li>
+          <li>Webhook handling for payment notifications</li>
+          <li>Refund management system</li>
+          <li>Payment reconciliation and reporting</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>License Management System</h3>
+        <p>Designed and implemented a sophisticated licensing system:</p>
+        <ul>
+          <li>Hardware-based license key generation</li>
+          <li>Automated activation and validation</li>
+          <li>Grace period handling for expired licenses</li>
+          <li>Multi-tier subscription plans</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="card" style="text-align: center; padding: 48px 24px;">
+        <h2 style="margin-bottom: 16px;">Interested in this project?</h2>
+        <p style="margin-bottom: 32px;">Let's discuss how I can bring similar solutions to your business</p>
+        <a href="contact.html" class="btn btn-primary">
+          <span>Get in Touch</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Vasanth Jamulayala — Built with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -8,29 +8,43 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <!-- Animated Blob Backgrounds -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  
   <canvas id="particleCanvas"></canvas>
   <div class="grain-overlay"></div>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <h1 class="logo">Vasanth<span class="dot">.</span></h1>
-        <p class="sub">Python Developer</p>
+        <h1 class="logo" data-text="Vasanth.">Vasanth<span class="dot">.</span></h1>
+        <p class="sub typing-effect"></p>
       </div>
       <nav id="nav" class="nav">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="skills.html" class="nav-link">Skills</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button id="menuBtn" class="menu-btn" aria-label="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="soundToggle" class="icon-btn" aria-label="Toggle sound">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button id="menuBtn" class="menu-btn" aria-label="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -38,9 +52,9 @@
     <!-- Hero -->
     <section class="hero container" id="home">
       <div class="hero-left animate-on-scroll">
-        <div class="badge">👋 Welcome to my portfolio</div>
+        <div class="badge scramble-text">👋 Welcome to my portfolio</div>
         <h2 class="hero-title">
-          Hi — I'm <strong class="gradient-text">Vasanth Jamulayala</strong>
+          Hi — I'm <strong class="gradient-text glitch-text" data-text="Vasanth Jamulayala">Vasanth Jamulayala</strong>
         </h2>
         <p class="lead">
           Python Developer focused on scalable backend systems using Django, DRF, Celery and Redis. I build APIs and integrations for web, mobile (React Native) and desktop (Electron).
@@ -55,29 +69,61 @@
         <p class="links">
           <a class="btn btn-primary" href="https://github.com/vasanth933" target="_blank" rel="noopener">
             <span>GitHub</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            <i class="fab fa-github"></i>
           </a>
           <a class="btn btn-outline" href="https://www.linkedin.com/in/vasanth-jamulayala" target="_blank" rel="noopener">
             <span>LinkedIn</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="btn btn-outline" href="contact.html">
+            <span>Let's Talk</span>
+            <i class="fas fa-paper-plane"></i>
           </a>
         </p>
       </div>
       <div class="hero-right animate-on-scroll">
-        <div class="card card-3d">
+        <!-- Profile Photo with Crazy Effects -->
+        <div class="profile-container">
+          <div class="profile-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+          <div class="profile-photo">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vasanth&backgroundColor=6ee7b7" alt="Vasanth Jamulayala" class="profile-img">
+            <div class="profile-glow"></div>
+            <div class="profile-particles">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="profile-status">
+            <span class="status-dot"></span>
+            Available for work
+          </div>
+        </div>
+        
+        <div class="card card-3d stats-card">
           <div class="glow-effect"></div>
-          <h3>✨ Summary</h3>
-          <p>
-            Backend engineer with experience building billing, licensing, payments and logistics systems. Strong focus on performance (caching, async) and reliable deployments (Docker, GitHub Actions).
-          </p>
-          <ul class="mini">
-            <li><strong>Open to:</strong> Remote & on-site</li>
-            <li><strong>Location:</strong> Hyderabad, India</li>
-          </ul>
+          <h3>✨ Quick Stats</h3>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-count="2">0</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="15">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="10">0</div>
+              <div class="stat-label">Tech Stack</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="100">0</div>
+              <div class="stat-label">Code Quality</div>
+            </div>
+          </div>
           <div class="card-shine"></div>
         </div>
       </div>
@@ -126,26 +172,157 @@
     <section id="skills" class="container section">
       <h2 class="section-title animate-on-scroll">
         <span class="title-number">02.</span> Technical Skills
+        <div class="title-decoration"></div>
       </h2>
       <div class="skills-grid">
-        <div class="skill-card animate-on-scroll">
-          <div class="skill-icon">💻</div>
-          <h4>Languages & Frameworks</h4>
-          <p>Python, JavaScript, Django, DRF, Flask, React</p>
+        <!-- Languages -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fab fa-python python-icon"></i>
+              <i class="fab fa-js-square js-icon"></i>
+            </div>
+            <h4>Languages</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tag"><i class="fas fa-code"></i> SQL</span>
+          </div>
           <div class="skill-glow"></div>
         </div>
-        <div class="skill-card animate-on-scroll">
-          <div class="skill-icon">⚡</div>
-          <h4>Async & Performance</h4>
-          <p>Celery, Redis, RabbitMQ, Query Optimization, Caching</p>
+
+        <!-- Backend Frameworks -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <svg class="django-icon" viewBox="0 0 24 24" width="48" height="48">
+                <path fill="#092e20" d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.637 0 1.121.05 1.707.203zm0 9.143a3.894 3.894 0 00-1.325-.204c-1.988 0-3.134 1.223-3.134 3.365 0 2.09 1.096 3.236 3.109 3.236.433 0 .79-.025 1.35-.102V9.142zM21.314 6.06v9.097c0 3.134-.229 4.638-.917 5.937-.637 1.249-1.478 2.039-3.211 2.905l-3.644-1.733c1.733-.815 2.574-1.529 3.109-2.625.56-1.121.739-2.421.739-5.835V6.059h3.924zM17.39.021h3.924v4.026H17.39z"/>
+              </svg>
+            </div>
+            <h4>Backend Frameworks</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fas fa-server"></i> Django</span>
+            <span class="tag"><i class="fas fa-code-branch"></i> DRF</span>
+            <span class="tag"><i class="fas fa-flask"></i> Flask</span>
+            <span class="tag"><i class="fas fa-fire"></i> FastAPI</span>
+          </div>
           <div class="skill-glow"></div>
         </div>
-        <div class="skill-card animate-on-scroll">
-          <div class="skill-icon">☁️</div>
-          <h4>Cloud & Tools</h4>
-          <p>PostgreSQL, MySQL, AWS, Docker, GitHub Actions, Git, Jira</p>
+
+        <!-- Frontend -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fab fa-react react-icon"></i>
+              <i class="fab fa-html5 html-icon"></i>
+            </div>
+            <h4>Frontend</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-react"></i> React</span>
+            <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
           <div class="skill-glow"></div>
         </div>
+
+        <!-- Async & Performance -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fas fa-bolt"></i>
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4>Async & Performance</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fas fa-tasks"></i> Celery</span>
+            <span class="tag"><i class="fas fa-database"></i> Redis</span>
+            <span class="tag"><i class="fas fa-stream"></i> RabbitMQ</span>
+            <span class="tag"><i class="fas fa-tachometer-alt"></i> Optimization</span>
+          </div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fas fa-database db-icon"></i>
+            </div>
+            <h4>Databases</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fas fa-elephant"></i> PostgreSQL</span>
+            <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tag"><i class="fas fa-leaf"></i> MongoDB</span>
+            <span class="tag"><i class="fas fa-server"></i> SQLite</span>
+          </div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fab fa-aws aws-icon"></i>
+              <i class="fab fa-docker docker-icon"></i>
+            </div>
+            <h4>Cloud & DevOps</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-aws"></i> AWS</span>
+            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
+            <span class="tag"><i class="fab fa-github"></i> GitHub Actions</span>
+            <span class="tag"><i class="fab fa-linux"></i> Linux</span>
+          </div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Tools & Others -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fab fa-git-alt git-icon"></i>
+              <i class="fab fa-github"></i>
+            </div>
+            <h4>Tools & Others</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tag"><i class="fab fa-jira"></i> Jira</span>
+            <span class="tag"><i class="fas fa-code"></i> VS Code</span>
+            <span class="tag"><i class="fas fa-terminal"></i> Postman</span>
+          </div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="skill-card animate-on-scroll magnetic-item" data-tilt>
+          <div class="skill-header">
+            <div class="skill-icon-group">
+              <i class="fab fa-react react-icon"></i>
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Mobile Development</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-react"></i> React Native</span>
+            <span class="tag"><i class="fas fa-mobile-alt"></i> Mobile Apps</span>
+            <span class="tag"><i class="fas fa-desktop"></i> Electron</span>
+          </div>
+          <div class="skill-glow"></div>
+        </div>
+      </div>
+
+      <!-- Skill Visualization -->
+      <div class="skill-visualization animate-on-scroll">
+        <canvas id="skillChart"></canvas>
+      </div>
+    </section>
       </div>
     </section>
 
@@ -153,38 +330,189 @@
     <section id="projects" class="container section">
       <h2 class="section-title animate-on-scroll">
         <span class="title-number">03.</span> Projects
+        <div class="title-decoration"></div>
       </h2>
 
-      <div class="project animate-on-scroll">
-        <div class="project-number">01</div>
-        <h3>TailorTrix Desktop Application</h3>
-        <p class="muted">Electron · React · Django · MySQL · Razorpay · Celery · Redis</p>
-        <p>Developed backend modules for licensing, subscriptions and boutique operations. Integrated Razorpay and implemented sync between desktop and backend services.</p>
-        <div class="project-glow"></div>
-      </div>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <a href="project-tailortrix.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="TailorTrix Desktop App" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fas fa-desktop"></i> Electron</span>
+                <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">01</div>
+                <h3>TailorTrix Desktop Application</h3>
+              </div>
+              <p class="muted">Electron · React · Django · MySQL · Razorpay · Celery · Redis</p>
+              <p>Developed backend modules for licensing, subscriptions and boutique operations. Integrated Razorpay and implemented sync between desktop and backend services.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-code"></i>
+                  <span>15K+ Lines</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-users"></i>
+                  <span>200+ Users</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.8 Rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
 
-      <div class="project animate-on-scroll">
-        <div class="project-number">02</div>
-        <h3>InstaFabrics Mobile App</h3>
-        <p class="muted">React Native · Django REST · Google Maps · Porter · Shiprocket · Razorpay</p>
-        <p>Built ordering & delivery app for boutique materials with live tracking, delivery automation and secure payments.</p>
-        <div class="project-glow"></div>
-      </div>
+        <!-- Project 2 -->
+        <a href="project-instafabrics.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="InstaFabrics Mobile App" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-react"></i> React Native</span>
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-map-marked-alt"></i> Maps</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">02</div>
+                <h3>InstaFabrics Mobile App</h3>
+              </div>
+              <p class="muted">React Native · Django REST · Google Maps · Porter · Shiprocket · Razorpay</p>
+              <p>Built ordering & delivery app for boutique materials with live tracking, delivery automation and secure payments.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-download"></i>
+                  <span>500+ Downloads</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-shipping-fast"></i>
+                  <span>1K+ Deliveries</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-star"></i>
+                  <span>4.9 Rating</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
 
-      <div class="project animate-on-scroll">
-        <div class="project-number">03</div>
-        <h3>Billing & Invoice Software (Swipe-like)</h3>
-        <p class="muted">Django · DRF · MySQL · PDF Generation</p>
-        <p>Created billing flow: quotations, invoices, GST breakdown and PDF generator. Fast searchable catalog and customer records.</p>
-        <div class="project-glow"></div>
-      </div>
+        <!-- Project 3 -->
+        <a href="project-billing.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80" alt="Billing Software" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tech-badge"><i class="fas fa-file-pdf"></i> PDF</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">03</div>
+                <h3>Billing & Invoice Software</h3>
+              </div>
+              <p class="muted">Django · DRF · MySQL · PDF Generation</p>
+              <p>Created billing flow: quotations, invoices, GST breakdown and PDF generator. Fast searchable catalog and customer records.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-file-invoice"></i>
+                  <span>10K+ Invoices</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-clock"></i>
+                  <span>90% Time Saved</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Real-time</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
 
-      <div class="project animate-on-scroll">
-        <div class="project-number">04</div>
-        <h3>Admin & Boutique Dashboards</h3>
-        <p class="muted">Django Templates · REST APIs · Charts</p>
-        <p>Internal admin panel for user management, license generation, renewals, payments and revenue analytics.</p>
-        <div class="project-glow"></div>
+        <!-- Project 4 -->
+        <a href="project-dashboard.html" class="project-card-link animate-on-scroll">
+          <div class="project-card">
+            <div class="project-media">
+              <div class="project-image-container">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Admin Dashboard" class="project-img">
+                <div class="project-overlay">
+                  <div class="view-project-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>View Project Details</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-tech-stack">
+                <span class="tech-badge"><i class="fab fa-python"></i> Django</span>
+                <span class="tech-badge"><i class="fas fa-chart-pie"></i> Charts</span>
+                <span class="tech-badge"><i class="fas fa-server"></i> REST API</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-number">04</div>
+                <h3>Admin & Boutique Dashboards</h3>
+              </div>
+              <p class="muted">Django Templates · REST APIs · Charts</p>
+              <p>Internal admin panel for user management, license generation, renewals, payments and revenue analytics.</p>
+              <div class="project-stats">
+                <div class="stat">
+                  <i class="fas fa-users-cog"></i>
+                  <span>Multi-tenant</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Secure</span>
+                </div>
+                <div class="stat">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span>Fast</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-glow"></div>
+          </div>
+        </a>
       </div>
     </section>
 
